@@ -96,6 +96,66 @@
             --radius-sm: 10px;
             --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
+        /* ===== BOTÓN CTA DESTACADO Y ANIMADO ===== */
+.btn-primary {
+    display: inline-block;
+    /* Degradado atractivo con tonos dorados y anaranjados */
+    background: linear-gradient(135deg, #f39c12 0%, #d4ac0d 50%, #f1c40f 100%);
+    background-size: 200% auto;
+    color: #0f1a2e;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.05rem;
+    padding: 16px 40px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    
+    /* Sombra con luz (Glow Effect) */
+    box-shadow: 0 6px 25px rgba(243, 156, 18, 0.45);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Efecto al pasar el cursor (Hover) */
+.btn-primary:hover {
+    background-position: right center; /* Desplaza el degradado */
+    transform: translateY(-4px) scale(1.02); /* Se eleva y crece ligeramente */
+    box-shadow: 0 12px 35px rgba(243, 156, 18, 0.65); /* Aumenta el resplandor */
+    color: #000000;
+}
+
+/* Efecto al hacer clic (Active) */
+.btn-primary:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.4);
+}
+
+/* ===== DESTELLO DE LUZ INTERNO (SHIMMER EFFECT) ===== */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent
+    );
+    transform: skewX(-25deg);
+    transition: 0.75s;
+}
+
+.btn-primary:hover::before {
+    left: 125%; /* Pasa un destello brillante al hacer hover */
+}
         
         /* ===== BOTONES ===== */
         .btn-primary {
@@ -604,18 +664,18 @@
     <section class="order-bump-section" id="order-bump">
         <div class="container">
             <div class="order-bump-box">
-                <span class="bump-badge">Complemento Recomendado</span>
+                <span class="bump-badge">TE RECOMIENDO ESTOS AUDIOS</span>
                 <div class="bump-content">
                     <div class="bump-icon">
                         <i class="fas fa-headphones-alt"></i>
                     </div>
                     <div class="bump-details">
-                        <h3>¿Quieres acelerar tus resultados hasta un 300%?</h3>
-                        <p><strong>Añade los Audios de Neuroplasticidad Guiada.</strong> La lectura te da el conocimiento, pero los audios reprograman tu subconsciente mientras descansas o trabajas.</p>
+                        <h3>¿Quieres acelerar tus resultados?</h3>
+                        <p><strong>CAMBIA LO QUE ESCUCHAS.</strong> La lectura te da el conocimiento, pero si dejas de escuchar musica vacia mientras descansas o trabajas.</p>
                         <ul class="bump-features">
-                            <li><i class="fas fa-bolt"></i> Estimulación binaural para fijar patrones de éxito.</li>
-                            <li><i class="fas fa-clock"></i> Sesiones de solo 10 a 15 minutos diarios.</li>
-                            <li><i class="fas fa-play-circle"></i> <strong>Escúchalos directamente en nuestra plataforma interna.</strong></li>
+                            <li><i class="fas fa-bolt"></i>lo primero que escuchas en la mañana tiene un gran efecto al pasar el dia.</li>
+                            <li><i class="fas fa-clock"></i>lo mismo en las noches lo ultimo que te dices o que vez.se graba en tu subconciente a esto se le conoce como neuro plasticidad</li>
+                            <li><i class="fas fa-play-circle"></i> <strong>y si empiesas a escuchar esto todos os dias? Escúcha una parte en nuestra plataforma interna. imaginate empezar y terminar tus dias asi </strong></li>
                         </ul>
                     </div>
                 </div>
