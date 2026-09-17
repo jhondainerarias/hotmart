@@ -9,6 +9,7 @@
             --bg-color: #0b0f19;
             --card-bg: #161f33;
             --accent-color: #00f2fe;
+            --morning-color: #f7ad00;
             --accent-gradient: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%);
             --cta-gradient: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
             --text-color: #ffffff;
@@ -64,13 +65,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-         h3 {
-            color: #f7ad00;
-            font-weight: bold;
-            margin-right: 10px;
-        }
 
-        /* Estilo para el artículo largo */
+        /* Estilo para el artículo */
         .article-content {
             color: var(--text-muted);
             font-size: 0.98rem;
@@ -91,10 +87,10 @@
             color: var(--text-color);
         }
 
-        /* --- SECCIÓN CON IMAGEN COMPACTA Y BOTÓN SUPERPUESTO --- */
+        /* --- SECCIÓN IMAGEN --- */
         .product-image-container {
             position: relative;
-            max-width: 320px; /* Tamaño reducido para la imagen */
+            max-width: 320px;
             margin: 0 auto 30px auto;
             border-radius: 16px;
             overflow: hidden;
@@ -114,7 +110,6 @@
             filter: brightness(0.95);
         }
 
-        /* Etiqueta superpuesta superior */
         .overlay-badge {
             position: absolute;
             top: 12px;
@@ -129,7 +124,6 @@
             border: 1px solid rgba(0, 242, 254, 0.3);
         }
 
-        /* Botón superpuesto inferior */
         .overlay-cta {
             position: absolute;
             bottom: 15px;
@@ -157,25 +151,61 @@
             transform: scale(1.03);
         }
 
-        /* Audio */
+        /* --- SECCIÓN DE AUDIOS (MAÑANA Y NOCHE) --- */
+        .audio-section {
+            margin-bottom: 30px;
+        }
+
         .audio-preview {
             background: rgba(0, 0, 0, 0.25);
             padding: 20px;
             border-radius: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: left;
+        }
+
+        .audio-preview.morning-card {
+            border-left: 4px solid var(--morning-color);
+        }
+
+        .audio-preview.night-card {
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .audio-preview h3 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+        }
+
+        .audio-preview.morning-card h3 {
+            color: var(--morning-color);
+        }
+
+        .audio-preview.night-card h3 {
+            color: var(--accent-color);
         }
 
         .audio-preview p {
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
         }
 
         audio {
             width: 100%;
             outline: none;
+            border-radius: 8px;
+        }
+
+        .audio-exclusive {
+            font-size: 0.8rem;
+            color: #38ef7d;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: 500;
         }
 
         /* Beneficios */
@@ -260,30 +290,46 @@
             <p>Cambia lo que entra a tu cabeza al irte a la cama y al levantarte. Si controlas las puertas de entrada de tu mente en esos dos momentos clave, cambiarás por completo tus resultados.</p>
         </div>
 
-        <!-- Imagen del Producto con Tamaño Reducido -->
+        <!-- Imagen del Producto -->
         <div class="product-image-container">
             <span class="overlay-badge">🎧 Formato Digital</span>
-            <img src="2.jpg" alt="Portada del producto Audio Motivacional">
+            <img src="3.jpg" alt="Portada del producto Audio Motivacional">
             <div class="overlay-cta">
-                <a href="https://pay.hotmart.com/F107645155C" class="btn-overlay">⚡ Comprar Ahora</a>
+                <a href="https://pay.hotmart.com/F107645155C" class="btn-overlay">tu transformacion aun clic </a>
             </div>
         </div>
 
-        <!-- Vista Previa de Audio -->
-        <div class="audio-preview">
-            <h3>y si comiensas tu dia escuchando canciones como esta:</h3>
-            <audio controls>
-                <source src="promo.mp3" type="audio/mpeg">
-                Tu navegador no soporta el reproductor de audio.
-            </audio>
-             <div class="benefit-item"><span></span>no la vas a encontrar en youtube, spotify, solo aqui</div>
+        <!-- SECCIÓN DE REPRODUCTORES DE AUDIO -->
+        <div class="audio-section">
+            
+            <!-- Audio de la Mañana -->
+            <div class="audio-preview morning-card">
+                <h3>☀️ Audio Activación de la Mañana</h3>
+                <p>Diseñado para despertar tu enfoque, certeza y energía imparable en los primeros 5 minutos del día.</p>
+                <audio controls>
+                    <source src="promo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+
+            <!-- Audio de la Noche -->
+            <div class="audio-preview night-card">
+                <h3>🌙 Audio Reprogramación en la Noche</h3>
+                <p>Perfecto para soltar el estrés, inducir paz profunda y grabar afirmaciones de victoria mientras duermes.</p>
+                <audio controls>
+                    <source src="01.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el reproductor de audio.
+                </audio>
+            </div>
+
+            <div class="audio-exclusive">🔒 Pistas exclusivas: No disponibles en YouTube ni Spotify</div>
         </div>
 
         <!-- Lista de Beneficios -->
         <div class="benefits">
             <div class="benefit-item"><span>✓</span> Reprogramación subconsciente profunda durante el sueño.</div>
             <div class="benefit-item"><span>✓</span> Mayor enfoque y claridad mental al iniciar la mañana.</div>
-            <div class="benefit-item"><span>✓</span> Compatible con cualquier celular.</div>
+            <div class="benefit-item"><span>✓</span> Compatible con cualquier celular o dispositivo.</div>
             <div class="benefit-item"><span>✓</span> Cuando lo aprendas de memoria y lo cantes serás otra persona.</div>
         </div>
 
