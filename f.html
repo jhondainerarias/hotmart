@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frases Poderosas de los Maestros del Éxito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --azul-autoridad: #0B2545;
+      --gris-fondo: #071322;
+      --gris-tarjeta: #102A45;
+      --verde-exito: #137547;
+      --naranja-cta: #FF5A1E;
+      --naranja-brillo: #FF7B47;
+      --blanco: #FFFFFF;
+      --dorado: #D4AF37;
+      --dorado-suave: rgba(212, 175, 55, 0.3);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--gris-fondo);
+      color: var(--blanco);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* HEADER / HERO */
+    header {
+      background: linear-gradient(180deg, #071322 0%, #0b2545 100%);
+      padding: 50px 20px 40px;
+      text-align: center;
+      border-bottom: 2px solid var(--dorado-suave);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.15);
+      color: var(--dorado);
+      border: 1px solid var(--dorado);
+      padding: 6px 18px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    h1 span {
+      color: var(--dorado);
+    }
+
+    p.subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: #C0D1E2;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* SECCIÓN DESTACADA DE LA IMAGEN */
+    .hero-mockup {
+      margin: 40px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .mockup-wrapper {
+      position: relative;
+      background: var(--gris-tarjeta);
+      padding: 25px;
+      border-radius: 24px;
+      border: 1px solid var(--dorado-suave);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(212, 175, 55, 0.1);
+      max-width: 650px;
+      width: 100%;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .mockup-wrapper:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 175, 55, 0.2);
+    }
+
+    .mockup-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* BOTÓN LLAMATIVO CON EFECTOS */
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(45deg, var(--naranja-cta), var(--naranja-brillo));
+      color: var(--blanco);
+      font-weight: 800;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      padding: 18px 36px;
+      border-radius: 50px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 25px rgba(255, 90, 30, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      animation: pulse 2s infinite;
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .cta-button::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(
+        60deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+      );
+      transform: rotate(30deg);
+      animation: shine 3s infinite;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 15px 35px rgba(255, 90, 30, 0.7);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      20% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    /* SECCIÓN LO QUE VAS A DESCUBRIR */
+    .inside-section {
+      padding: 60px 20px 40px;
+    }
+
+    .inside-section h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+    }
+
+    .inside-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .inside-item {
+      background: var(--gris-tarjeta);
+      padding: 25px;
+      border-radius: 12px;
+      border-left: 4px solid var(--dorado);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .inside-item span {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--dorado);
+    }
+
+    .inside-item h4 {
+      margin: 10px 0;
+      font-size: 1.1rem;
+    }
+
+    .inside-item p {
+      color: #A0B3C6;
+      font-size: 0.9rem;
+    }
+
+    /* SECCIÓN BENEFICIOS */
+    .features {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background-color: var(--gris-tarjeta);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: var(--dorado);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #A0B3C6;
+      font-size: 0.95rem;
+    }
+
+    /* OFERTA Y GARANTÍA */
+    .offer-box {
+      background: linear-gradient(180deg, #102A45 0%, #0B2545 100%);
+      border: 2px solid var(--dorado);
+      border-radius: 20px;
+      padding: 40px 20px;
+      text-align: center;
+      margin: 40px auto;
+      max-width: 800px;
+    }
+
+    .price {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 800;
+      color: var(--dorado);
+      margin: 15px 0;
+    }
+
+    .guarantee {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #A0B3C6;
+      font-size: 0.9rem;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #5A7188;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* AJUSTES RESPONSIVOS (MÓVILES) */
+    @media (max-width: 600px) {
+      header { padding: 35px 15px 25px; }
+      .mockup-wrapper { padding: 15px; border-radius: 16px; }
+      .cta-button { width: 100%; padding: 18px 20px; }
+      .guarantee { flex-direction: column; gap: 5px; }
+      .offer-box { padding: 30px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="badge">Compilación de Frases de Poder</span>
+      <h1>Te propongo algo: cambiemos esas frases negativas, adagios y refranes por las frases que usaban los <span>Maestros del Éxito</span></h1>
+      <p class="subtitle">Hagamos un formateo estratégico a nuestro lenguaje. Cambiemos el sistema operativo negativo por un sistema operativo positivo 2.0.</p>
+      
+      <!-- VISTA PREVIA DE LA PORTADA EN MARCO ELEGANTE -->
+      <div class="hero-mockup">
+        <div class="mockup-wrapper">
+          <img src="portada.jpg" alt="Carátula Frases Poderosas de los Maestros del Éxito">
+        </div>
+      </div>
+
+      <!-- REEMPLAZA '#' CON TU LINK DIRECTO DE HOTMART -->
+      <a href="#" class="cta-button">¡Quiero Acceso Inmediato Ahora!</a>
+    </div>
+  </header>
+
+  <!-- LO QUE VAS A DESCUBRIR -->
+  <section class="container inside-section">
+    <h2>Lo que vas a descubrir dentro</h2>
+    <div class="inside-grid">
+      <div class="inside-item">
+        <span>01</span>
+        <h4>La regla de oro del riesgo</h4>
+        <p>Cómo los grandes empresarios toman decisiones de alto impacto minimizando pérdidas.</p>
+      </div>
+      <div class="inside-item">
+        <span>02</span>
+        <h4>Gestión de la adversidad</h4>
+        <p>Los modelos mentales exactos para convertir crisis financieras en oportunidades.</p>
+      </div>
+      <div class="inside-item">
+        <span>03</span>
+        <h4>Estrategias de escala</h4>
+        <p>Los principios inquebrantables que separan un negocio común de un imperio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="container">
+    <div class="features">
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Colapsa el Tiempo</h3>
+        <p>Ahorra años de frustración y pérdidas financieras adoptando lecciones ya probadas y refinadas por los mejores.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🛡️</div>
+        <h3>Reduce el Riesgo</h3>
+        <p>Aprende a identificar trampas invisibles antes de cometer errores costosos en tus proyectos y finanzas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">🧠</div>
+        <h3>Eleva tu Estándar</h3>
+        <p>Reconfigura tu mente para pensar, decidir y ejecutar al nivel de los emprendedores más dominantes del mercado.</p>
+      </div>
+    </div>
+
+    <!-- SECCIÓN DE OFERTA -->
+    <div class="offer-box">
+      <h2>OFERTA ESPECIAL DE LANZAMIENTO</h2>
+      <p>Accede hoy mismo al libro digital completo y comienza a transformar tu forma de pensar.</p>
+      <div class="price">COP 12.990 <span style="font-size: 1rem; text-decoration: line-through; color: #7A8E9E;">COP 25.999</span></div>
+      
+      <!-- REEMPLAZA '#' CON TU LINK DIRECTO DE HOTMART -->
+      <a href="#" class="cta-button">Obtener Libro Digital</a>
+
+      <div class="guarantee">
+        <span>🔒 Pago 100% Seguro en Hotmart</span>
+        <span>•</span>
+        <span>⚡ Entrega Inmediata a tu Correo</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Maestros del Éxito. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
